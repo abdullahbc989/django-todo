@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for item in todos %}
+        <ul>
+            <li>
+                <a href="/todos/details/{{item.id}}">
+                    {{ item.title }}
+                </a>
+            </li>
+            <ul>
+                <li>{{ item.text }}</li>
+            </ul>
+        </ul>
+    {% endfor %}
+{% endblock content %}

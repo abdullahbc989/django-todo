@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <title>{% block title%}To Do{% endblock title %}</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div class="container">
+                <h1>{% block head %}My To Do List{% endblock head %}</h1>
+                <h3><a href="/todos/">Home </a><a href="/todos/add/">Add</a></h3>
+                <hr>
+                {% block content %}
+                {% endblock content %}
+            </div>
+        </div>
+    </body>
+</html>
